@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+/* ======== reset ======= */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ============ parent ============ */
+.parent-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.parent-container .layout-container {
+  width: 1440px;
+  margin: 0px auto;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.songs-board {
+  width: 100%;
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.songs-board .navigator {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (8)[1fr];
+      grid-template-rows: repeat(1fr, 8);
+  place-items: center;
+  background-color: #cfcfcf;
+}
+
+.songs-board .board .grey-box {
+  width: 100%;
+  height: 250px;
+  background-color: grey;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 400px 1fr;
+      grid-template-columns: 400px 1fr;
+}
+
+.songs-board .board .grey-box img {
+  width: 230px;
+  height: 200px;
+}
+
+.footer-playbox {
+  height: calc(100vh - 80vh);
+  background-color: #20b1f9;
+}
+/*# sourceMappingURL=style.css.map */
