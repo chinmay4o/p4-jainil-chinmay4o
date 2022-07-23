@@ -16,6 +16,9 @@ body {
   overflow-x: hidden;
 }
 
+$text-color: #fff;
+$base-color: #fff;
+
 /* ============ parent ============ */
 .parent-container {
   width: 100vw;
@@ -31,7 +34,7 @@ body {
   }
 }
 
-.songs-board {
+.songs-playboard {
   width: 100%;
   height: 80vh;
   display: grid;
@@ -47,25 +50,124 @@ body {
   }
 
   .board {
-    .grey-box {
+    .play-box {
       width: 100%;
       height: 250px;
-      background-color: grey;
+      background-color: rgb(80, 80, 80);
       display: grid;
       grid-template-columns: 400px 1fr;
 
-      img {
-        width: 230px;
-        height: 200px;
+      .img-box {
+        display: grid;
+        place-items: center;
+        img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      .song-info {
+        margin: 20px;
+        .title {
+          font-size: 22px;
+          font-weight: 400;
+          color: $text-color;
+        }
+
+        .artist {
+          margin-top: 25px;
+          font-size: 13px;
+          color: $text-color;
+        }
+
+        .info {
+          font-size: 13px;
+          color: $text-color;
+          margin-top: 4px;
+        }
+
+        .songs-options {
+          color: $text-color;
+          margin-top: 100px;
+          width: 300px;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
       }
     }
 
-    .table-container {
+    .album-table {
+      border-collapse: collapse;
+      margin: 20px;
+      width: 97%;
+
+      tbody {
+        tr {
+          height: 43px;
+
+          td {
+            text-align: left;
+            padding: 8px;
+            font-size: 13px;
+
+            span {
+              border: 1px solid black;
+              padding: 4px;
+
+              a {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+      }
     }
   }
 }
 
 .footer-playbox {
   height: calc(100vh - 80vh);
+  width: 100%;
   background-color: rgb(32, 177, 249);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+  .song-favicon {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: 10px;
+
+    img {
+      height: 100px;
+      width: 120px;
+    }
+
+    .more-info {
+      color: $text-color;
+
+      p { 
+        margin: 10px 0;
+      }
+    
+    }
+  }
+
+  .song-controlls {
+    margin-left: 200px;
+    display: grid;
+    // grid-template-columns: repeat(1fr, 8);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+
+    i {
+        color: $text-color;
+        
+    }
+  }
 }
