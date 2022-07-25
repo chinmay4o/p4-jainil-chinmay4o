@@ -30,6 +30,9 @@ https://chinmay.dev/hello-world
   Sometimes there is an additional path to the resource in the URL. For example, for this URL,https://jennapederson.dev/the-path-to/hello-world, the-path-to is the path on the server to the requested resource, hello-world. You can think of this like the directory structure of files and other directories on your computer. It’s a way to organize your resources, whether they are static HTML, CSS, Javascript, or image files, or dynamically generated content.
 
 
+![browser Image](images/loc.png)
+
+
 ## 2. Browser looks up IP address for the domain
 
 After you’ve typed the URL into your browser and pressed enter, the browser needs to figure out which server on the Internet to connect to. To do that, it needs to look up the IP address of the server hosting the website using the domain you typed in. It does this using a DNS lookup.
