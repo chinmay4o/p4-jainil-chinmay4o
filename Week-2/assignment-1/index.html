@@ -14,7 +14,8 @@
         <div class="layout-container">
             <div class="hero-container">
                 <h1>Mystay Homes</h1>
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit architecto voluptatibus laboriosam</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit architecto
+                    voluptatibus laboriosam</p>
 
                 <div class="article">
                     <div class="box1">
@@ -49,42 +50,46 @@
             </div>
 
             <div class="form-container">
-                <form action="">
+                <form action="" onsubmit="">
                     <label for="title">Title
-                        <input type="radio">
-                        <input type="radio">
-                        <input type="radio">
+
+                        <span>
+                            Mr <input type="radio" name="title" value="Mr">
+                            Mrs <input type="radio" name="title" value="Mrs">
+                            Miss <input type="radio" name="title" value="Miss">
+                        </span>
+
                     </label>
 
                     <label for="firstname">
-                        First Name <input type="text" id="firstname">
+                        First Name <input type="text" id="firstname" name="firstname" required="true">
                     </label>
                     <label for="lastname">
-                        Last Name <input type="text" id="lastname">
+                        Last Name <input type="text" id="lastname" name="lastname" required="true">
                     </label>
 
                     <label for="email">
-                        Email <input type="email" id="email">
+                        Email <input type="email" id="email" name="email" required="true">
                     </label>
 
                     <label for="phonenumber">
-                        Phone Number <input type="text" id="phonenumber">
+                        Phone Number <input type="text" id="phonenumber" name="phonenumber" required="true">
                     </label>
 
                     <label for="password">
-                        Password <input type="password" id="password">
+                        Password <input type="password" id="password" name="password" required="true">
                     </label>
 
                     <label for="cpassword">
-                        Confirm Password <input type="password" id="cpassword">
+                        Confirm Password <input type="password" id="cpassword" name="cpassword" required="true">
                     </label>
 
                     <label for="country">
-                        Country <input type="text" id="country">
+                        Country <input type="text" id="country" name="country" required="true">
                     </label>
 
                     <p class="terms">
-                        <input type="checkbox">
+                        <input type="checkbox" required="true">
                         <a href="www.google.com">Terms & Conditions</a>
                     </p>
 
@@ -92,21 +97,23 @@
                 </form>
             </div>
         </div>
-        <footer class="footer-container">
+
+
+    </div>
+    <footer class="footer-container">
+        <div class="footer-layout">
             <div class="footer-box">
                 <h1>Mystay Homes</h1>
 
-                <div>
-                    <h5>About Us</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum accusamus in,
-                        adipisci veritatis fugit expedita quia itaque illum beatae vel alias eaque, aspernatur ex
-                        reiciendis, eum iste voluptates suscipit?
-                    </p>
-                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatum accusamus in,
+                    adipisci veritatis fugit expedita quia itaque illum beatae vel alias eaque, aspernatur ex
+                    reiciendis, eum iste voluptates suscipit?
+                </p>
+
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 
 </html>

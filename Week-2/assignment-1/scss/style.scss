@@ -37,14 +37,14 @@ $base-color: #f7f7f7;
 
 // ====== Mixins =======
 @mixin container-base {
-    width: 1250px;
-    margin: 0px auto;
-    padding: 40px 0;
+  width: 1250px;
+  margin: 0px auto;
+  padding: 40px 0;
 }
 
 // ====== hero container =======
 .hero-container {
-@include container-base;
+  @include container-base;
 
   h1 {
     font-size: 35px;
@@ -106,36 +106,80 @@ $base-color: #f7f7f7;
 .form-container {
   @include container-base;
 
-form {
-    label {
-        display: block;
-        margin: 19px 0;
-        font-size: 16px;
-
-        input[type="text"], input[type="password"], input[type="email"] {
-            display: inline-block;
-            margin-left: 10px;
-            border: 2px solid grey;
-            width : 200px;
-            height: 25px;
-            border-radius: 5px;
-        }
-
-        input[type="radio"] {
-            display: inline-block;
-            margin-left: 10px;
-            border: 2px solid grey;
-            width : 20px;
-            height: 15px;
-        }
-
-        input[type="checkbox"] {
-            display: inline-block;
-            margin-left: 10px;
-            border: 2px solid grey;
-            width : 20px;
-            height: 15px;
-        }
+  form {
+    label:nth-child(1) {
+      span {
+        margin-left: 25px;
+      }
     }
+
+    label {
+      display: block;
+      margin: 19px 0;
+      font-size: 16px;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"] {
+        display: inline-block;
+        margin-left: 10px;
+        border: 2px solid grey;
+        width: 200px;
+        height: 25px;
+        border-radius: 5px;
+      }
+
+      input[type="radio"] {
+        display: inline-block;
+        margin-left: 0px;
+        border: 2px solid grey;
+        width: 20px;
+        height: 15px;
+      }
+
+      input[type="checkbox"] {
+        display: inline-block;
+        margin-left: 10px;
+        border: 2px solid grey;
+        width: 20px;
+        height: 15px;
+      }
+    }
+
+    input[type="submit"] {
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 33px;
+      background-color: grey;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      font-family: "League Spartan";
+      font-size: 17px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  }
 }
+
+.footer-container {
+  width: 100vw;
+  background-color: #cfcfcf;
+  overflow-x: hidden;
+
+  .footer-layout {
+    width: 1440px;
+    margin: 0px auto;
+    background-color: #cfcfcf;
+  }
+
+  .footer-box {
+    @include container-base;
+
+    background-color: #cfcfcf;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    place-items: center;
+  }
 }
