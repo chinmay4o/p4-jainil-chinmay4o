@@ -1,27 +1,24 @@
-var nums = [2, 7, 11, 15];
-var nums2 = [3, 2, 4, 2];
-var target = 13;
-var target2 = 6;
-var sol = [];
+function createIncrement() {
+  let count = 0;
 
-var twoSum = function (nums, target) {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] + nums[j] == target) {
-        // console.log(nums[i], nums[j]);
-        sol.push(i);
-        sol.push(j);
-        console.log(i, j);
-// break;
-console.log(sol);
-return sol;
-      }
-    }
+  function increment() {
+    count++;
   }
-//   console.log(sol);
-//   return sol;
-};
 
-console.time();
-twoSum(nums2, target2);
-console.timeEnd();
+  let message = `Count is${count}`;
+
+  function log() {
+    console.log(message);
+  }
+
+  return [increment, log];
+}
+const [increment, log] = createIncrement();
+increment();
+increment();
+increment();
+log(); // What is logged?
+
+// In the above example the function is being called at line number 16 where,
+// "count is 0" line is already created. Now after increamenting the count there
+// is no such function which updates the message and count inside thats why the count is printed tobe 0
