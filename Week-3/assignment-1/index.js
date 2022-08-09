@@ -24,16 +24,16 @@ const memoizeAdd = memoize(add);
 // console.log("memoizeAdd", memoizeAdd);
 
 //then calling...
-memoizeAdd(100, 100); //returns 200
-memoizeAdd(100); //returns 100
+time(() => memoizeAdd(100, 100)) //returns 200
 memoizeAdd(100); //returns 100
 memoizeAdd(100, 200); //returns 300
-memoizeAdd(100, 200); //returns 300
-memoizeAdd(100, 100); //returns 200
+time(() => memoizeAdd(100, 200)) //returns 200
+time(() => memoizeAdd(100)) //returns 100
+time(() => memoizeAdd(100, 100)) //returns 200
 
 // Time function to log time;
-// function time(fn) {
-//   console.time();
-//   fn();
-//   console.timeEnd();
-// }
+function time(fn) {
+  console.time();
+  fn();
+  console.timeEnd();
+}
